@@ -14,12 +14,13 @@ class ContactList extends Component {
     }
    
     render(){
-        console.log(this.state.contacts);
+        console.log('Contat Data: ', this.state.contacts);
         
         const list = this.state.contacts.map((item, index) => {
             console.log(item);
             return <ContactCard key={index} firstName={item.firstName} lastName={item.lastName}/>
         });
+        
         return (
            <div>{list}</div>
         )        
