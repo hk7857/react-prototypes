@@ -4,20 +4,12 @@ import ContactCard from './contact_card';
 import contactData from '../data/contacts';
 
 class ContactList extends Component {
-    constructor(props){
-
-        super(props);
-           
-        this.state = {
-            contacts: contactData
-        }
-    }
-   
+    
     render(){
-        console.log('Contat Data: ', this.state.contacts);
+        // console.log('Contat Data: ', this.state.contacts);
         
-        const list = this.state.contacts.map((item, index) => {
-            console.log(item);
+        const list = this.props.contacts.map((item, index) => {
+            console.log('item: ', item);
             return <ContactCard key={index} contact={item}/>
         });
 
